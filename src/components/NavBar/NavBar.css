@@ -1,0 +1,15 @@
+.active{
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    color: rgb(133, 120, 120);
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: rgb(211, 204, 204);
+    font-weight: bold;
+}
+
+
