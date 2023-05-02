@@ -21,7 +21,9 @@ a:hover{
     border-radius: 5px;
     color: white;
 }
-
+.nav-container-custom{
+    background-color: black;
+}
 
 @media screen and (max-width:500px) {
     li{

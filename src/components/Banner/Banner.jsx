@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import "./Header.css";
+import './Banner.css'
 import NavBar from "../NavBar/NavBar";
 import { Container } from "react-bootstrap";
 import chefImage from "../../assets/chefCockingEdited.png";
-const Header = () => {
+const Banner = () => {
   return (
     <div className="main-header rounded">
-      <NavBar></NavBar>
+      
       <div className="container mt-5 banner-container">
         <div className="container">
           <p className="banner-header">
@@ -36,4 +36,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Banner;

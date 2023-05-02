@@ -12,7 +12,7 @@ const NavBar = () => {
       logoutUser();
   }
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary nav-container-custom">
       <div className="container-fluid">
         <a className="navbar-brand text-white fw-bold">Chef-Shop</a>
         <button
