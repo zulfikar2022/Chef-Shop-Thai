@@ -25,9 +25,13 @@ a:hover{
     background-color: black;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:576px) {
     li{
         /* margin-top: 10px; */
         margin-bottom: 15px;
     }
+    .nav-container-custom{
+        background-color: rgb(92, 86, 86);
+    }
+    
 }

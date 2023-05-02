@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 import chefImage from "../../assets/chefCockingEdited.png";
 const Banner = () => {
   return (
-    <div className="main-header rounded">
+    <div className="main-header rounded mb-5" >
       
       <div className="container mt-5 banner-container">
         <div className="container">

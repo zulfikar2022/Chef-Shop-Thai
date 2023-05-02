@@ -1,0 +1,13 @@
+.all-chefs{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+
+
+@media screen and (max-width:500px) {
+    .all-chefs{
+     grid-template-columns: 1fr;
+    }
+    
+}

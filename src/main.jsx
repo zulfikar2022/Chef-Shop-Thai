@@ -10,9 +10,9 @@ import Blogs from "./components/Blogs/Blogs.jsx";
 import HomePage from "./components/HomePage/HomePage.jsx";
 import Registration from "./components/Registration/Registration.jsx";
 import AuthProvider from "./components/AuthProvider/AuthProvider.jsx";
-import Banner from "./components/Banner/Banner.jsx";
-import SubsidiaryHome from "./components/SubsidiaryHome/SubsidiaryHome.jsx";
-import Chefs from "./components/Chefs/Chefs.jsx";
+
+
+
 
 
 const router = createBrowserRouter([
@@ -22,13 +22,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <SubsidiaryHome></SubsidiaryHome>,
-        children:[
-          {
-            path:'/chef',
-            element:<Chefs></Chefs>
-          }
-        ]
+        element: <HomePage></HomePage>,
+        loader:() => fetch('http://localhost:5000/'),
       },
       {
         path: "/login",
