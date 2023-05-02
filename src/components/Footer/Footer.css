@@ -1,0 +1,10 @@
+.footer-container{
+    background-color: rgb(118 117 117);
+    color: white;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+}
+.opening-hours{
+    font-size: 30px;
+}
