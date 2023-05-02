@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
     const [accepted,setAccepted] = useState(false);
@@ -56,6 +57,7 @@ const Registration = () => {
         <Button disabled={!accepted} variant="dark" className="w-100" type="submit">
           Register
         </Button>
+        <p>Already have an acount? <Link to='/login' className='text-danger text-decoration-underline'>Please Login</Link> </p>
       </Form>
     </Container>
   );
