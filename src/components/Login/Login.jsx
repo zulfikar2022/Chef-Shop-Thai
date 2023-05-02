@@ -3,10 +3,11 @@ import React, { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { FaBeer, FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
-  const {loginUser,setUser,user} = useContext(AuthContext);
+  const {loginUser,setUser,user,loginWithGoogle,loginWithGithub} = useContext(AuthContext);
 
   const handleUserLogin = (event) => {
       event.preventDefault();
@@ -25,6 +26,19 @@ const Login = () => {
         .catch(error => {
           console.log(error);
         })
+
+  }
+  const handleLoginWithGoogle = () => {
+    loginWithGoogle()
+      .then(result => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+  const handleLoginWithGithub = () => {
 
   }
   return (
@@ -54,6 +68,8 @@ const Login = () => {
             Please Register
           </Link>{" "}
         </p>
+        <button onClick={handleLoginWithGoogle} className="btn btn-outline-primary w-100 mb-2"> <FaGoogle/> Login with google</button>
+        <button onClick={handleLoginWithGithub} className="btn btn-outline-dark w-100 mb-2"><FaGithub/> Login with github</button>
       </Form>
     </Container>
   );
