@@ -8,8 +8,16 @@
 a{
     text-decoration: none;
     margin-left: 10px;
-    color: rgb(211, 204, 204);
+    color: rgb(196, 187, 187);
     font-weight: bold;
 }
+a:hover{
+    color: rgb(196, 187, 187);
+}
 
-
+#btn-login{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}

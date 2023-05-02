@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./NavBar.css";
-import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -43,9 +42,9 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-            <button className="btn btn-light fw-semibold" type="submit">
-              Login
-            </button>
+            
+              <Link id="btn-login" to='/login'>Login</Link>
+            
        
         </div>
       </div>
