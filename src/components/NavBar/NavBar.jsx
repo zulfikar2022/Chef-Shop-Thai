@@ -1,9 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useContext } from "react";
 import "./NavBar.css";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Button, Image } from "react-bootstrap";
 
 const NavBar = () => {
+  const {user,logoutUser} = useContext(AuthContext);
+  console.log(user);
+  const handleLogOut = () => {
+      logoutUser();
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary ">
       <div className="container-fluid">
@@ -42,8 +49,13 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-            
-              <Link id="btn-login" to='/login'>Login</Link>
+           {
+            user &&  <img src={user.photoUrl}  className="rounded" /> 
+           } 
+         { !user ?  
+         <Link className="btn-login " to='/login'>Login</Link>:
+       <Link onClick={handleLogOut} className="btn-login ">Logout</Link>
+         }
             
        
         </div>

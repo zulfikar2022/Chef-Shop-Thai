@@ -114,7 +114,8 @@ const Registration = () => {
           Already have an acount?{" "}
           <Link to="/login" className="text-danger text-decoration-underline">
             Please Login
-          </Link>{" "}
+          </Link>
+          
         </p>
       </Form>
     </Container>

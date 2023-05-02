@@ -3,3 +3,48 @@
     /* background-repeat: no-repeat; */
     color: white;
 }
+.banner-header{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.chef-image{
+    width: 100%;
+    border-radius: 5px;
+    height: 425px;
+    /* margin-left: 10rem; */
+}
+.banner-container{
+    display: flex;
+    /* justify-content: space-around;
+     */
+     align-items: center;   
+}
+.banner-description{
+    color: white;
+    
+    font-weight: bold;
+}
+
+.banner-description span{
+    font-size: 25px;
+    font-weight: bold;
+    color: orangered;
+}
+.header-button{
+    padding: 10px;
+    background-color: white;
+    color: orangered;
+    border: 0;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:500px) {
+    .banner-container{
+       
+         flex-direction: column;   
+    } 
+}
