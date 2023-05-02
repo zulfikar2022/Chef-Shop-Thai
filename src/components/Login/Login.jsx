@@ -39,7 +39,15 @@ const Login = () => {
       })
   }
   const handleLoginWithGithub = () => {
-
+    loginWithGithub()
+      .then(result => {
+        console.log(result.user);
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch(error => {
+        console.log(error);
+      })
   }
   return (
     <Container className="w-50 mt-3">
