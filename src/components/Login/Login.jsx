@@ -42,6 +42,7 @@ const Login = () => {
       .then(result => {
         console.log(result.user);
         setUser(result.user);
+        navigate(from)
         
       })
       .catch(error => {
@@ -54,6 +55,7 @@ const Login = () => {
         console.log(result.user);
         console.log(result.user);
         setUser(result.user);
+        navigate(from)
       })
       .catch(error => {
         console.log(error);

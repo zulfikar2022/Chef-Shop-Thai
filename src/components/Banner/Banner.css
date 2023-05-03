@@ -29,7 +29,10 @@
 .banner-description span{
     font-size: 25px;
     font-weight: bold;
-    color: orangered;
+    background-color: white;
+    color: black;
+    padding: 3px;
+    border-radius: 3px;
 }
 .header-button{
     padding: 10px;

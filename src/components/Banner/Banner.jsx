@@ -26,7 +26,7 @@ const Banner = () => {
             experience. So come and join us, and let us take you on a journey of
             culinary delight that you'll never forget.
           </p>
-          <button className="header-button">See More About us</button>
+          <button className="header-button text-dark">See More About us</button>
         </div>
         <div className="container">
           <img className="chef-image" src={chefImage} />
