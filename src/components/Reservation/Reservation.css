@@ -1,0 +1,21 @@
+.reservation-container{
+   background-color: black;
+   justify-content: center;
+   align-items: center;
+}
+.your-reservation{
+    font-size: 30px;
+}
+.make-reservation{
+    border: 1px solid white;
+    width: 260px;
+}
+.make-reservation:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:576px) {
+    .reservation-text{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}

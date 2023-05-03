@@ -5,6 +5,7 @@ import Gallery from '../Gallery/Gallery';
 import Banner from '../Banner/Banner';
 import { useLoaderData } from 'react-router-dom';
 import Chef from '../Chef/Chef';
+import Reservation from '../Reservation/Reservation';
 
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
                 {chefs.map(chef => <Chef key={chef.id}>{chef}</Chef> )}
             </div>
             <Gallery></Gallery>
+            <Reservation></Reservation>
         </div>
     );
 };

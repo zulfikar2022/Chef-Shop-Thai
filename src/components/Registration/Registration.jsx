@@ -40,6 +40,7 @@ const Registration = () => {
         console.log(createdUser);
         // setUser(createdUser);
         setSuccessMessage('User Successfully Created!!');
+        setAccepted(false);
       })
       .catch((error) => {
         console.log(error);
