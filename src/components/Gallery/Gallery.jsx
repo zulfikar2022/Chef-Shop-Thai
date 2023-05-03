@@ -8,10 +8,11 @@ import photo4 from '../../assets/food4.jpg';
 import photo5 from '../../assets/food5.jpg';
 import photo6 from '../../assets/food6.jpg';
 
+
 const Gallery = () => {
     return (
         <div className='mt-3'>
-            <h1 className='text-center'>Our Gallery</h1>
+            <h1 className='text-center bg-dark text-white rounded p-3'>Our Gallery</h1>
             <div className='gallery-container'>
                 <div>
                     <img src={photo1} />

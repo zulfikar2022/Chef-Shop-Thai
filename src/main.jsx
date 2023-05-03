@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -10,6 +11,8 @@ import Blogs from "./components/Blogs/Blogs.jsx";
 import HomePage from "./components/HomePage/HomePage.jsx";
 import Registration from "./components/Registration/Registration.jsx";
 import AuthProvider from "./components/AuthProvider/AuthProvider.jsx";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute.jsx";
+import ChefRecipe from "./components/ChefRecipe/ChefRecipe.jsx";
 
 
 
@@ -23,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage></HomePage>,
-        loader:() => fetch('https://chef-shop-server.vercel.app/'),
+        loader:() => fetch('http://localhost:5000/'),
       },
       {
         path: "/login",
@@ -38,6 +41,11 @@ const router = createBrowserRouter([
         path: "/blogs",
         element: <Blogs></Blogs>,
       },
+      {
+        path:':id',
+        element:<ChefRecipe></ChefRecipe>,
+        loader:({params}) => fetch(`http://localhost:5000/${params.id}`)
+      }
     ],
   },
   {

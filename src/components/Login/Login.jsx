@@ -1,16 +1,21 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
-import { FaBeer, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
 
   const {loginUser,setUser,user,loginWithGoogle,loginWithGithub} = useContext(AuthContext);
+  const [error ,setError ] = useState('');
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/' ;
 
   const handleUserLogin = (event) => {
       event.preventDefault();
+      setError('');
       const form = event.target;
       const email = form.email.value;
       const password = form.password.value;
@@ -22,9 +27,12 @@ const Login = () => {
           setUser(loggedUser);
           console.log('This is a use of context api ',loggedUser);
           form.reset();
+          navigate(from,{replace:true})
+          setError('');
         })
         .catch(error => {
           console.log(error);
+          setError(error.message);
         })
 
   }
@@ -54,15 +62,17 @@ const Login = () => {
       <Form onSubmit={handleUserLogin}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" name="email" placeholder="Enter email" />
+          <Form.Control type="email" name="email" placeholder="Enter email" required />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="password" placeholder="Password" />
+          <Form.Control type="password" name="password" required placeholder="Password" />
         </Form.Group>
         {/* This is section is for error message showing */}
-        <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          {error && <p className="text-danger fw-bold">{error}</p>}
+        </Form.Group>
 
         <Button variant="dark" className="w-100 fw-semibold" type="submit">
           Login

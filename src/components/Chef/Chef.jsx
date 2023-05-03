@@ -8,6 +8,7 @@ import '../../assets/chef3.jpg';
 import '../../assets/chef4.jpg';
 import '../../assets/chef5.jpg';
 import '../../assets/chef6.jpg';
+import { Link } from "react-router-dom";
 
 const Chef = ({ children }) => {
   console.log(children);
@@ -26,9 +27,9 @@ const Chef = ({ children }) => {
         <p className="mb-0 mt-0 text-muted">Recipe: {recipe}</p>
         <p className="text-muted mt-0">Likes: {likes} </p>
         <p className="card-text">{shortDetails.slice(0,100)}...</p>
-        <button href="#" className="btn btn-dark">
+        <Link to={`/${id}`} className="btn btn-dark">
           View Recipes
-        </button>
+        </Link>
       </div>
     </div>
   );

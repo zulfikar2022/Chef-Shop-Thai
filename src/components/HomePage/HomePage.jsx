@@ -14,7 +14,8 @@ const HomePage = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='all-chefs'>
+            <h1 className='text-center bg-dark text-white rounded p-3'>Our Chefs</h1>
+            <div className='all-chefs mb-5'>
                 {chefs.map(chef => <Chef key={chef.id}>{chef}</Chef> )}
             </div>
             <Gallery></Gallery>

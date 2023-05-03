@@ -1,0 +1,28 @@
+.card-image-custom{
+    height: 300px;
+    width: 100%;
+}
+.image-and-recipes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.chef-small-details{
+        background-color: black;
+        color: white;
+        padding: 20px;
+        width: 50%;
+        border-radius: 5px;
+}
+.field-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.file-general{
+    font-size: 1rem;
+    font-weight: normal;
+}
