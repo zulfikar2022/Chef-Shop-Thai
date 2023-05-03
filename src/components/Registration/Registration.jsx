@@ -38,7 +38,7 @@ const Registration = () => {
           photoURL:photoUrl,
         });
         console.log(createdUser);
-        setUser(createdUser);
+        // setUser(createdUser);
         setSuccessMessage('User Successfully Created!!');
       })
       .catch((error) => {
