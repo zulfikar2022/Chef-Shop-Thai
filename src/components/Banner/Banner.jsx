@@ -12,10 +12,10 @@ const Banner = () => {
       <div className="container mt-5 banner-container">
         <div className="container">
           <p className="banner-header">
-            Fresh Food <br></br> and Great Test
+            Fresh Thai Food <br></br> and Great Test
           </p>
           <p className="banner-description">
-            Welcome to <span>Chef-Shop</span> , where we believe that dining out
+            Welcome to <span>Chef-Shop-Thai</span> , where we believe that dining out
             should be an experience to remember. We take pride in serving our
             guests the very best in culinary delights, using only the freshest
             and finest ingredients available. Our menu is carefully curated to

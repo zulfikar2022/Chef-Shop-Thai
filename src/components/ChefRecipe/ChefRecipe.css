@@ -26,3 +26,9 @@
     font-size: 1rem;
     font-weight: normal;
 }
+.recipe-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    /* grid-auto-rows: 1vh; */
+}

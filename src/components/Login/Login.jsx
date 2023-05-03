@@ -11,6 +11,7 @@ const Login = () => {
   const [error ,setError ] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
+  console.log('login page location ',location);
   const from = location.state?.from?.pathname || '/' ;
 
   const handleUserLogin = (event) => {
@@ -41,6 +42,7 @@ const Login = () => {
       .then(result => {
         console.log(result.user);
         setUser(result.user);
+        
       })
       .catch(error => {
         console.log(error);

@@ -22,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -43,14 +44,10 @@ const router = createBrowserRouter([
       },
       {
         path:':id',
-        element:<ChefRecipe></ChefRecipe>,
+        element:<PrivateRoute><ChefRecipe></ChefRecipe></PrivateRoute>,
         loader:({params}) => fetch(`http://localhost:5000/${params.id}`)
       }
     ],
-  },
-  {
-    path: "/error",
-    element: <ErrorPage></ErrorPage>,
   },
 ]);
 

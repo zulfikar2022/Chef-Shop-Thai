@@ -6,15 +6,17 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { Button, Image } from "react-bootstrap";
 
 const NavBar = () => {
-  const {user,logoutUser} = useContext(AuthContext);
+  const { user, logoutUser, setUser } = useContext(AuthContext);
   console.log(user);
   const handleLogOut = () => {
-      logoutUser();
-  }
+    logoutUser().then((res) => {
+      setUser(null);
+    });
+  };
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary nav-container-custom">
+    <nav className="rounded navbar navbar-expand-lg bg-body-tertiary nav-container-custom">
       <div className="container-fluid">
-        <a className="navbar-brand text-white fw-bold">Chef-Shop</a>
+        <a className="navbar-brand text-white fw-bold">Chef-Shop-Thai</a>
         <button
           className="navbar-toggler"
           type="button"
@@ -39,7 +41,7 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-            <NavLink
+              <NavLink
                 to="/blogs"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "active" : ""
@@ -49,15 +51,18 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-           {
-            user &&  <img src={user.photoUrl}  className="rounded" /> 
-           } 
-         { !user ?  
-         <Link className="btn-login " to='/login'>Login</Link>:
-       <Link onClick={handleLogOut} className="btn-login ">Logout</Link>
-         }
-            
-       
+   
+            {user && <p className="text-white fw-bold mb-0 me-3">{user.displayName}</p>}
+            {!user ? (
+              <Link className="btn-login " to="/login">
+                Login
+              </Link>
+            ) : (
+              <Link onClick={handleLogOut} className="btn-login ">
+                Logout
+              </Link>
+            )}
+          
         </div>
       </div>
     </nav>
