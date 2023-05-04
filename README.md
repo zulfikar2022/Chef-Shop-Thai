@@ -1,5 +1,6 @@
 ABOUT THE PROJECT 
 
+* This site contains Thai food
 * The project contains a navbar with which has a banner some cards and a footer.
 * The authentication system is build by using firebase. Users can login using their google  and github account also.
 * Their is  private route in the project that is the details of the chef.

@@ -23,6 +23,9 @@ const Blogs = () => {
   };
   return (
     <div>
+        <button className="btn btn-dark mt-2 mb-2" onClick={handleDownloadPDF}>
+        Download PDF
+      </button>
       <div id="blog-page">
         <h1>
           1. Write some differences between uncontrolled and controlled
@@ -94,9 +97,7 @@ const Blogs = () => {
           </p>
         </div>
       </div>
-      <button className="btn btn-dark mt-2 mb-2" onClick={handleDownloadPDF}>
-        Download PDF
-      </button>
+    
     </div>
   );
 };
